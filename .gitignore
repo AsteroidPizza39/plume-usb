@@ -1,0 +1,11 @@
+/build/
+*.obj
+*.exe
+*.pdb
+*.ilk
+__pycache__/
+.env
+.env.*
+!.env.example
+*.log
+settings.txt
