@@ -35,6 +35,7 @@ bool character_keys(uint32_t cp, KeyboardLayout layout, CharacterKeys *out) {
     memset(out, 0, sizeof(*out));
     if (cp == '\n' || cp == '\r') return single(out, 0, 0x28);
     if (cp == '\t') return single(out, 0, 0x2b);
+    if (cp == '\b') return single(out, 0, 0x2a);  /* backspace for cancelling auto-indent */
     if (cp == ' ') return single(out, 0, 0x2c);
     bool upper = cp >= 'A' && cp <= 'Z';
     uint32_t letter = upper ? cp + 32 : cp;
